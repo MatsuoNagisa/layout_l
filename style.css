@@ -1,0 +1,37 @@
+/*///////////////////////
+Base
+///////////////////////*/
+
+body {
+}
+
+/*/ //////////////////////
+Layout
+///////////////////////*/
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-right: solid 1px #000;
+  border-left: solid 1px #000;
+  background-color: aliceblue;
+}
+
+/*///////////////////////
+Common
+///////////////////////*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*/ //////////////////////
+Header
+///////////////////////*/
+header {
+  background-color: #eee;
+}
+.logo {
+  width: 220px;
+}
