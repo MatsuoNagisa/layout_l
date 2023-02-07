@@ -1,0 +1,262 @@
+/*///////////////////////
+Base
+///////////////////////*/
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /*1rem = 10px*/
+}
+body {
+}
+
+/*/ //////////////////////
+Layout
+///////////////////////*/
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/*///////////////////////
+Common
+///////////////////////*/
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+.ttl {
+  font-family: "Philosopher", sans-serif;
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.active {
+  display: block;
+}
+/*/ //////////////////////
+Header
+///////////////////////*/
+header {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 4px 4px 16px rgba(51, 51, 51, 0.3);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 220px;
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+/*/ //////////////////////
+Header
+///////////////////////*/
+#gnav {
+  display: none;
+}
+#gnav ul {
+  display: flex;
+  flex-direction: column;
+}
+#gnav a {
+  font-size: 1.6rem;
+}
+@media(min-width: 768px) {
+  #gnav {
+    display:block;
+  }
+  #gnav ul {
+    display: flex;
+    gap:30px
+  }
+}
+#menu {
+
+}
+/*/ //////////////////////
+footer
+///////////////////////*/
+footer {
+
+}
+/*/ //////////////////////
+MV
+///////////////////////*/
+#mv {
+  position: relative;
+  height: 100vh;
+  background-image: url(./images/menu10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+#mv::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-color: #f66; */
+  background-image: linear-gradient(180deg, #c9ffbf 0%, #ffafbd 100%);
+  mix-blend-mode: hue;
+}
+.mv__ttl {
+  font-family: "Philosopher", sans-serif;
+  font-size: 6.2rem;
+  text-align: center;
+}
+/*/ //////////////////////
+Lead Contens
+///////////////////////*/
+.lead__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+.lead__left {
+}
+.lead__right {
+  padding: 2em 4em;
+  background: violet;
+}
+@media (min-width: 768px) {
+  .lead__wrapper {
+    flex-direction: row;
+  }
+  .lead__wrapper:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .lead__left {
+    width: 45%;
+    position: relative;
+    top: -40px;
+    left: 20px;
+  }
+  .lead__right {
+    width: 55%;
+  }
+  .lead__wrapper:nth-of-type(2n) .lead__left {
+    left: auto;
+    right: 20px;
+  }
+}
+
+/*/ //////////////////////
+Position
+///////////////////////*/
+.posi__box__wrapper {
+  position: relative;
+  height: 600px;
+  display: flex;
+  gap: 20px;
+  background-color: #ccc;
+}
+.posi__box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f66;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.posi__box:nth-of-type(1) {
+  z-index: 6;
+  /* position: absolute;
+  bottom: 10px;
+  right: -10px; */
+}
+.posi__box:nth-of-type(2) {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 10;
+  background-color: aqua;
+}
+.posi__box:nth-of-type(3) {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  /* bottom: 100px;
+  left: 100px; */
+  background-color: rgb(174, 255, 0);
+}
+/*/ //////////////////////
+Menu
+///////////////////////*/
+.scroll__wraper {
+  display: flex;
+  overflow-x: scroll;
+}
+.menu__list  {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 2%;
+}
+.menu__list li {
+  width: 300px;
+  /* width: 40%; */
+  border: solid 1px #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.menu__list li:nth-of-type(1) {
+  /* display: none; */
+  /* visibility: hidden; */
+  opacity: 0.4;
+}
+.menu__list li a {
+  text-decoration: none;
+}
+.menu__innner {
+  padding: 1.5em;
+}
+.menu__ttl {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.menu__txt {
+  font-size: 1.4em;
+}
+/* @media (min-width:768px) {
+  .menu__list li {
+    width: calc((100% - 60px) / 4);
+  }
+} */
